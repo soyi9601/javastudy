@@ -11,6 +11,7 @@ public class MainClass {
     
     // 복합 대입 연산 (산술 연산 + 대입 연산)
     int b = 0;
+    System.out.println(b);
     b += 1;   // b를 1 증가시키기 b = b + 1;
     System.out.println(b);
     b -= 1;   // b를 1 감소시키기 b = b - 1
