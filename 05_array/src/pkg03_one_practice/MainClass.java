@@ -1,4 +1,4 @@
-package pkg03_ont_practice;
+package pkg03_one_practice;
 
 public class MainClass {
 

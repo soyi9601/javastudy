@@ -48,7 +48,7 @@ public class MainClass {
      * 배열 초기화
      * 1. 배열을 선언할 때 초기화 값들을 전달할 수 있다.
      * 2. 형식
-     *    1) int[] 배열이름 = new int[]{r값1, 값2, 값3, ...}
+     *    1) int[] 배열이름 = new int[]{값1, 값2, 값3, ...}
      *    2) int[] 배열이름 = {값1, 값2, 값3, ...} 
      * 
      */
@@ -107,6 +107,8 @@ public class MainClass {
       b[i] = a[i];
     }
     
+    a=b;
+    
     for(int i = 0; i < a.length; i++) {
       System.out.println(a[i]);
     }
@@ -129,7 +131,7 @@ public class MainClass {
   public static void main(String[] args) {
     
     
-    method5();
+    method4();
     
 
   }
