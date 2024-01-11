@@ -31,12 +31,21 @@ public class BankAccount {
     this.balance = balance;
   }
   
+//  public void deposit(long money) {
+//    if(money <= 0) {
+//      System.out.println(money + "실패");
+//    } else {
+//      balance += money;
+//      System.out.println( balance + "성공");
+//    }
+//  }
+  
   public void deposit(long money) {
     if(money <= 0) {
-      System.out.println(money + "실패");
+      System.out.println("X");
     } else {
       balance += money;
-      System.out.println( balance + "성공");
+      System.out.println(balance + "성공");
     }
   }
   
@@ -50,16 +59,15 @@ public class BankAccount {
   
   public long withdrawal(long money) {
     if(money <= 0) {
-      System.out.println(money + "출금불가");
       return 0L;
     }
-    if(money > balance) {
-      System.out.println("잔액부족");
+    if(balance < money) {
+      System.out.println("실패");
       return 0L;
+    } else {
+      balance -= money;
+      return money;
     }
-    
-    balance -= money;
-    return money;
   }
   
   public void transfer(BankAccount account, long money) {
@@ -68,11 +76,31 @@ public class BankAccount {
     
     // 내 통장에서 출금
     // long a = withdrawal(money);
+    // 
     
     // 네 통장에 입금
     // account.deposit(a);
     
-    account.deposit(withdrawal(money));
+    // account.deposit(withdrawal(money));
+    
+    
+    long yourmoney =0;
+    if(balance < money) {
+      System.out.println("실패");
+    } else {
+      balance -= money;
+      
+      
+      yourmoney = account.getBalance();
+      yourmoney += money;
+      
+      account.setBalance(yourmoney);
+      
+      System.out.println(balance + "내돈" + yourmoney );
+      
+    }
+    
+    
     
     
   }

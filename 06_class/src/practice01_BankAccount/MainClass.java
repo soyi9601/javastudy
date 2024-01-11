@@ -15,8 +15,10 @@ public class MainClass {
     // 생성자
     BankAccount account2 = new BankAccount("01012345678", 50000);
 
-    System.out.println(account2.getAccNo());
-    System.out.println(account2.getBalance());
+    /*
+     * System.out.println(account2.getAccNo());
+     * System.out.println(account2.getBalance());
+     */
     
     /////////////
     
