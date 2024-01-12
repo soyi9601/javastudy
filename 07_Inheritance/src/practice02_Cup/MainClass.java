@@ -10,7 +10,7 @@ public class MainClass {
     Cup cup2 = new Cup();
     cup2.fill(new CafeLatte());
     
-    Carrier carrier = new Carrier(2);
+    Carrier carrier = new Carrier(5);
     carrier.addCup(cup1);
     carrier.addCup(cup2);
     carrier.whoami();
