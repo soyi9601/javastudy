@@ -43,27 +43,25 @@ public class Customer {
   // 인자 : 구매할 가게, 구매할 빵 개수, 구매할 때 낼 돈
   // 반환 : 없음
   
-  public void buy(Bakery bakery, int count, int money) {
+  
+public void buy(Bakery bakery, int count, int money) {
     
-    // XXXXX 붕어빵 집에서 판매를 하지 않았을 때 상황은 고려 XXXXX. 내 상황만 생각해서 적으면 됨
     // 가진 돈이 부족하다.
     if(this.money < money) {
-      System.out.println("가진 돈이 부족하다.");
+      System.out.println("가진 돈이 부족합니다.");
       return;
     }
     
-    // 구매 (곧 Bakery 의 판매를 의미함.)
+    // 구매 (곧 Bakery의 판매를 의미한다.)
     BreadChange breadChange = null;
     if(bakery != null) {
       breadChange = bakery.sell(money, count);
     }
-    //BreadChange breadChange = bakery.sell(money, count);
-    
     
     // 구매 결과 처리
     if(breadChange != null) {
-      count += breadChange.getBread();
-      money += breadChange.getChange();
+      this.count += breadChange.getBread();
+      this.money += breadChange.getChange();
       this.money -= money;
     }
     

@@ -4,11 +4,22 @@ public class MainClass {
 
   public static void main(String[] args) {
     
-    Bakery bakery = new Bakery();
-    Customer customer = new Customer();
+    Customer customer = new Customer(10000, 0);
     
-    bakery.sell(10, 10000);
-    customer.buy(bakery, 5, 5000);
+    Bakery bakery1 = new Bakery(100, 10000);
+    Bakery bakery2 = new Bakery(100, 10000);
+    
+    customer.buy(bakery1, 5, 3000);
+    customer.buy(bakery2, 6, 3000);
+
+    System.out.println("bakery1이 가진 붕어빵 : " + bakery1.getCount());
+    System.out.println("bakery1이 가진 돈 : " + bakery1.getMoney());
+
+    System.out.println("bakery2가 가진 붕어빵 : " + bakery2.getCount());
+    System.out.println("bakery2가 가진 돈 : " + bakery2.getMoney());
+    
+    System.out.println("고객이 가진 붕어빵 : " + customer.getCount());
+    System.out.println("고객이 가진 돈 : " + customer.getMoney());
 
   }
 
