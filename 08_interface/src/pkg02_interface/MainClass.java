@@ -19,6 +19,7 @@ public class MainClass {
     
     
     // 사각형 호출
+    
     Shape shape2 = new Rectangle(0, 0, 5, 5);
     System.out.println(shape2.getArea());
     System.out.println(shape2.getCircum());
