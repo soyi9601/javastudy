@@ -1,5 +1,6 @@
 package pkg04_HashSet;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -32,9 +33,48 @@ public class MainClass {
     
   }
 
+  public static void method2() {
+    
+    // 교집합
+    Set<Integer> set1 = new HashSet<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+    Set<Integer> set2 = new HashSet<Integer>(Arrays.asList(4, 5, 6, 7, 8));
+    
+    // set1이 교집합 결과로 바뀐다.
+    set1.retainAll(set2);
+    
+    System.out.println(set1);
+    
+  }
+  
+  public static void method3() {
+    
+    // 합집합
+    Set<Integer> set1 = new HashSet<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+    Set<Integer> set2 = new HashSet<Integer>(Arrays.asList(4, 5, 6, 7, 8));
+    
+    // set1이 교집합 결과로 바뀐다.
+    set1.addAll(set2);
+    
+    System.out.println(set1);
+    
+  }
+  
+public static void method4() {
+    
+    // 차집합
+    Set<Integer> set1 = new HashSet<Integer>(Arrays.asList(1, 2, 3, 4, 5));
+    Set<Integer> set2 = new HashSet<Integer>(Arrays.asList(4, 5, 6, 7, 8));
+    
+    // set1이 교집합 결과로 바뀐다.
+    set1.addAll(set2);
+    
+    System.out.println(set1);
+    
+  }
+  
   public static void main(String[] args) {
 
-    method1();
+    method4();
     
   }
 
