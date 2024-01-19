@@ -199,7 +199,7 @@ public class Class01_String {
   
   public static void main(String[] args) {
     
-    method6();
+    practice02();
     
   }
   
@@ -236,7 +236,7 @@ public class Class01_String {
     
     // 앞으로 읽어도 뒤로 읽어도 동일한 문자열 판단하기
     
-    String word = "asfgdsag";
+    String word = "level";
     
     // 1. 한 글자씩 비교하기
     /*
