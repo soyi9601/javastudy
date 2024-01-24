@@ -26,6 +26,12 @@ public class MainClass {
    *    3) 현재 : .
    */
   
+  /*
+   * InputStream에 포함된 문자를 안 깨지고 잘 받기
+   * 1. InputStreamReader 를 사용한다.
+   * 2. DataInputStream을 사용한다.
+   */
+  
   public static void method1() {
     
     // 디렉터리 만들기/삭제하기
