@@ -26,12 +26,20 @@ public class MainClass {
     System.out.println(supplier.get());
   }
   
+  public static void method3(Supplier<Integer> supplier) {
+    System.out.println(supplier.get());
+  }
+  
   
   public static void main(String[] args) {
     
     // method1();
-    Supplier<String> supplier = () -> "hello world";
-    method2(supplier);
+//    Supplier<String> supplier = () -> "hello world";
+//    method2(supplier);
+    
+    // 호출할 때 마다 1~10 사이 난수를 출력하는 method3
+    method3( () -> (int)(Math.random() * 10 + 1) );
+    
     
   }
   
