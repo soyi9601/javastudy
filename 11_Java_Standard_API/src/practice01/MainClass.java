@@ -172,7 +172,7 @@ public class MainClass {
       totalMove += move;
       builder.append(yuts[move]);
       builder.append(",");
-    } while(move >= 4);
+    } while(move >= 4);                   // 4이상이면 한번 더 돌아라
     builder.append(totalMove).append("칸 이동한다.");
     System.out.println(builder.toString());
     

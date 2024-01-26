@@ -45,7 +45,8 @@ public class MainClass {
     Stream<String> stream = seasons.stream();
     stream.forEach((season) -> System.out.println(season));
     
-    //new HashSet<String>(seasons).stream().forEach();
+    new HashSet<String>(seasons).stream()
+    .forEach((season) -> System.out.println(season));
   }
   
   public static void method4() {
@@ -80,6 +81,7 @@ public class MainClass {
     stream.forEach((file) -> System.out.println(file.getName()));
     
     
+    /*
     try {
       
       // path라는 인터페이스에 paths(.nio)인 클래스
@@ -92,14 +94,15 @@ public class MainClass {
     } catch (Exception e) {
       e.printStackTrace();
     }
+    */
     
-    /*
+    /* 내가 해본 거
     List<String> files = Arrays.asList(javaHome.list());
     Stream<String> stream = files.stream();
     stream.forEach((file) -> System.out.println(files));
     */
     
-    /*
+    /* 내가 해본 거
     try {
       
       in = new BufferedReader(new FileReader(javaHome));
