@@ -32,6 +32,7 @@ public class MainClass {
    *    2) 포로퍼티 앞에 prefix 값으로 -D를 사용한다.
    * 4. github 에 올릴 수 없는 민감 정보를 처리하는 용도로 사용한다.
    * 5. 프로퍼티로 등록한 값은 System.getProperty() 메소드를 이용해서 가져온다.
+   * -D 로 시작되는 것들은 프로퍼티 
    */
   
   public static void method1() {
