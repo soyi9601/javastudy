@@ -86,7 +86,7 @@ public class UserDao {
     
     try {
       
-      connection();     // 위에서 다 불러놨기 때문에 호출해줘야함. ** 
+      connection();     // 위에서 다 불러놨기 때문에 호출만 해주면 됨 ** 
       
       String sql = "SELECT USER_NO, USER_NAME, USER_TEL, JOIN_DT FROM USER_T ORDER BY USER_NO DESC";
       ps = con.prepareStatement(sql);
@@ -123,7 +123,7 @@ public class UserDao {
       String sql = "SELECT USER_NO, USER_NAME, USER_TEL, JOIN_DT FROM USER_T WHERE USER_NO = ?";
       
       ps = con.prepareStatement(sql);
-      ps.setInt(1, user_no);  // ? <- 변수가 있으면 이거 까먹지말고 써주기. 첫번째 변수에 user_no 값 주기
+      ps.setInt(1, user_no);  // <- ? 변수가 있으면 이거 까먹지말고 써주기. 첫번째 변수에 user_no 값 주기
       rs = ps.executeQuery();
       
       if(rs.next()) {
