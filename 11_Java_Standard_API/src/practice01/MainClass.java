@@ -1,5 +1,6 @@
 package practice01;
 
+import java.security.SecureRandom;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -194,6 +195,13 @@ public class MainClass {
     //   몇 자리의 인증번호를 생성할까요? >>> 6
     //   생성된 6자리 인증번호는 Fa013b입니다.
     
+    Scanner sc = new Scanner(System.in);
+    System.out.println("몇자리?");
+    int number = sc.nextInt();
+    SecureRandom secureRandom = new SecureRandom();
+    
+    
+    
   }
 
   public static void method7() {
@@ -209,8 +217,24 @@ public class MainClass {
     // ...
     // 입력 >>> 4500
     // 정답입니다. 총 5번만에 성공했습니다.
-    
-    
+    Scanner sc = new Scanner(System.in);
+    int goal = (int)(Math.random() * 1000) + 1;
+    int nth = 0;
+    int input = 0;
+    do {
+      System.out.println("입력>");
+      input = sc.nextInt();
+      nth++;
+      if(input == goal) {
+        System.out.println("성공!" + nth + "만에 완료");
+      } else if(input > goal) {
+        System.out.println("down");
+      } else if(input < goal) {
+        System.out.println("up");
+      } 
+      
+    } while(goal != input);
+    sc.close();
   }
 
   public static void method8() {
@@ -227,6 +251,18 @@ public class MainClass {
     // 7 : ################## 18
     // 8 : ####### 7
     // 9 : ########### 11
+    
+    int[] numbers = new int[100];
+    int[] frequency = new int[10];
+    
+    for(int i = 0; i < numbers.length; i++) {
+      numbers[i] = (int)(Math.random() * 10);
+      frequency[i]++;
+    }
+    for(int i = 0; i < frequency.length; i++) {
+      StringBuilder sb = new StringBuilder();
+      
+    }
     
     
   }
@@ -259,6 +295,14 @@ public class MainClass {
     //   8 17  5 12  7
     //  16 22 18 24 23
     
+    final int SIZE = 5;
+    int[][] bingo = new int [SIZE][SIZE];
+    for(int i = 0; i < SIZE; i++) {
+      for(int j = 0; j < SIZE; j++) {
+        
+      }
+    }
+    
   }
   
   public static void main(String[] args) {
@@ -274,7 +318,7 @@ public class MainClass {
 //    }
     
     
-    method5();
+    method7();
     
     
   }
